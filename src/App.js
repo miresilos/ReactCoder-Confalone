@@ -4,6 +4,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <ItemListContainer greeting="lorem" />
     </>
   );
 }
