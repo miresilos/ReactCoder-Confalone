@@ -1,5 +1,6 @@
 import navlist from '../Assets/nav-list.png';
 import logo from '../Assets/logo.png'
+import CartWidget from './CartWidget';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap';
 
