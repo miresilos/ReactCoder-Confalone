@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <ItemListContainer greeting="Soy un fragmento de texto malvado. NO ME LEAS." />
+      <ItemListContainer greeting="Con cambios" />
     </>
   );
 }
