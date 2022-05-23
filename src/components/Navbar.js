@@ -29,7 +29,7 @@ const Navbar = () => {
                 </ul>
                 <a className="navbar-brand text-white" href="#">¡Pedí Ahora!</a>
                 </div>
-                    <a className="navbar-brand" href="#"><img src={logo} alt='Logo' /></a>
+                    <a className="navbar-brand" href="#"><img src={logo} width="30%" alt='Logo' /></a>
                     <CartWidget></CartWidget>
                 </div>
             </nav>
