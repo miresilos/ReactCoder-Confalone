@@ -1,10 +1,9 @@
-import react, { Component}  from 'react';
-import ReactDOM  from 'react-dom';
+import Producto from "../components/ItemCount";
 
-const ItemListContainer = (props) => {
+const ItemListContainer = () => {
     return (
-        <div>
-            {props.greeting}
+        <div className="ItemListContainer">
+            <Producto />
         </div>
     );
 }
