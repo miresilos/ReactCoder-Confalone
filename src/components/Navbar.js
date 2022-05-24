@@ -3,6 +3,7 @@ import logo from '../Assets/logo.png'
 import CartWidget from './CartWidget';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap';
+import React from 'react'
 
 const Navbar = () => {
     return (

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import React from 'react'
 
 const Producto = (props) => {
     const [valoraciones, setValoraciones] = useState(0);
