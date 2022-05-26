@@ -23,6 +23,20 @@
   padding: 20px;
 }
 
+#order-now{
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+  background-color: black;
+  padding: 3px 10px;
+  border-radius: 30px;
+}
+#order-now:hover{
+  transform: scale(1.1);
+  transition: all .2s ease;
+  box-shadow: 2px 0 5px 2px rgb(66,66,66);
+}
+
 .navbar{
   display: flex;
   flex-direction: row;
