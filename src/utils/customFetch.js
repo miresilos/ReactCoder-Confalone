@@ -1,5 +1,4 @@
 let is_ok = true;
-import React from 'react'
 
 const customFetch = (time, task) => {
     return new Promise ((resolve, reject) => {
