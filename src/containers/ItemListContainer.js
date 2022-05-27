@@ -1,9 +1,10 @@
 import ItemCount from "../components/ItemCount";
 import ItemList from "../components/ItemList"
 import customFetch from "../utils/customFetch";
+import React from 'react'
 import { useEffect, useState } from "react";
 const { products } = require('../utils/products');
-import React from 'react'
+
 
 const ItemListContainer = () => {
     const [data, setData] = useState([]);

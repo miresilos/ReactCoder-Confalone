@@ -1,7 +1,8 @@
+import React from 'react';
 let is_ok = true;
 
-const customFetch = (time, task) => {
-    return new Promise ((resolve, reject) => {
+function customFetch(time, task) {
+    return new Promise((resolve, reject) => {
         setTimeout(() => {
             if (is_ok) {
                 resolve(task);
