@@ -69,7 +69,7 @@ const products = [
         name: "Cachaça",
         stock: 100,
         cost: 3500,
-        description: "Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Sed porttitor lectus nibh. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur aliquet quam id dui posuere blandit.",
+        description: "Dosnec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Sed porttitor lectus nibh. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur aliquet quam id dui posuere blandit.",
         image: [
             "https://static.educalingo.com/img/de/800/cachaca-1.jpg"
         ],
