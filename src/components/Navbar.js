@@ -1,40 +1,29 @@
-import navlist from '../Assets/nav-list.png';
-import logo from '../Assets/logo.png'
+import logo from '../Assets/logo.png';
 import CartWidget from './CartWidget';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap';
 import React from 'react'
+import { Link } from "react-router-dom";
+import { AppBar } from "@material-ui/core";
+import { Wrapper, Left, Center, Right, MenuItem } from './StyledComponents';
+import BurgerMenu from './BurgerMenu';
 
 const Navbar = () => {
     return (
-        <header className="Header">
-            <nav className="navbar navbar-expand-lg">
-            <div className="container-fluid">
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarNavDarkDropdown">
-                <ul className="navbar-nav">
-                    <li className="nav-item dropdown">
-                    <a className="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src={navlist} alt='Nav-list' />
-                    </a>
-                    <ul className="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
-                        <li><a className="dropdown-item text-white" href="#">Inicio</a></li>
-                        <li><a className="dropdown-item text-white" href="#">Hacer pedido</a></li>
-                        <li><a className="dropdown-item text-white" href="#">Nuestra historia</a></li>
-                        <li><a className="dropdown-item text-white" href="#">Preguntas Frecuentes</a></li>
-                        <li><a className="dropdown-item text-white" href="#">Contactanos</a></li>
-                    </ul>
-                    </li>
-                </ul>
-                <a className="navbar-brand text-white" href="#">¡Pedí Ahora!</a>
-                </div>
-                    <a className="navbar-brand" href="#"><img src={logo} width="30%" alt='Logo' /></a>
-                    <CartWidget></CartWidget>
-                </div>
-            </nav>
-        </header>
+        <AppBar position='relative' className='AppBar'>
+            <Wrapper>
+                <Left>
+                    <BurgerMenu />
+                    {/* <Link to="/" className='Link'><p id="order-now">PEDIR YA</p></Link> */}
+                    <Link to="/category/1" className='Link'><MenuItem>Destilados</MenuItem></Link> {/* Enlaces temporales... Reposicionar y cambiar en un futuro */}
+                    <Link to="/category/2" className='Link'><MenuItem>Proxima Categoria</MenuItem></Link> {/* Enlaces temporales... Reposicionar y cambiar en un futuro */}
+                </Left>
+                <Center>
+                    <Link to="/" className='Link'><img src={logo} width="30%" alt='Logo' /></Link>
+                </Center>
+                <Right>
+                    <CartWidget />
+                </Right>
+            </Wrapper>
+        </AppBar>
     );
 }
 

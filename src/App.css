@@ -3,28 +3,15 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-.Header{
-  background-color: gray;
-  min-width: 100vh;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: start;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.AppBar{
+  background-color: #FF090C !important;
 }
 
-.dropdown-menu{
-  background-color: #09a5ffc2 !important;
-}
-
-.Header{
-  padding: 20px;
+.Link{
+  text-decoration: none;
 }
 
 #order-now{
-  text-decoration: none;
   color: white;
   font-weight: bolder;
   background-color: black;
@@ -37,38 +24,56 @@
   box-shadow: 2px 0 5px 2px rgb(66,66,66);
 }
 
-.navbar{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  min-width: 100vh;
-}
-.ItemListContainer{
-  display: flex;
-  margin-top: 1.25em;
+#icon-menu{
+  cursor: pointer;
+  position: relative;
+  margin-left: 20px;
+  z-index: 6;
+  font-size: 45px;
 }
 
-.product-container{
-  margin: auto;
+.cont-menu{
+  background-color: #FF090C;
+  box-shadow: 2px 0 5px 2px rgb(66,66,66);
+  width: 400px;
+  border-radius: 10px;
+  height: 80vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all .5s ease;
+  z-index: 5;
+}
+
+.cont-menu ul{
+  padding: 100px 0 20px 0;
+  list-style: none;
+}
+
+.cont-menu ul li{
+  padding: 10px 50px;
+  margin: 0 20px;
   text-align: center;
+  border-bottom: white solid 3px;
 }
 
-.product-counter{
-  display: flex;
-  align-items: center;
-  height: 30px;
-  border: solid 1px black;
-  border-radius: 5px;
+.cont-menu ul li p{
+  font-size: 25px;
+  color: white;
+  font-weight: bolder;
 }
 
-.counter-button{
-  padding: 0 10px;
-  color: cornflowerblue;
+.cont-menu ul li:hover{
   background-color: white;
-  border: none;
+}
+.cont-menu ul li:hover p{
+  color: #FF090C;
 }
 
-.counter-p{
-  margin: 0;
-  padding: 0 30px;
+.active{
+  transform: translate(-600px);
+}
+.opacity{
+  background-color: rgba(0,0,0,0.5);
+  transition: all 1s ease;
 }
