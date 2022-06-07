@@ -1,11 +1,16 @@
 import ItemCount from "./ItemCount";
+import { Link } from "react-router-dom";
+import { Button } from "@material-ui/core";
+import { useState } from "react";
+import ItemCount from "./ItemCount";
 import { Flex, DetailContainer, BuyingDetailContainer, ImageDetail, InfoContainer, HeadDetailInfoContainer, TitleDetail, Desc, Price } from "./StyledComponents";
-import React from 'react'
 
 const ItemDetail = ({item}) => {
+    const [itemCount, setItemCount] = useState(0);
     
     const onAdd = (qty) => {
         alert ("Seleccionaste " + qty + " productos.");
+        setItemCount(qty);
     }
 
     return(
@@ -25,7 +30,11 @@ const ItemDetail = ({item}) => {
                             <Price>$ {item.cost}</Price>
                             <Desc>{item.stock} unidades en stock</Desc>
                         </Flex>
-                        <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
+                        {
+                            itemCount === 0
+                            ? <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd} />
+                            : <Link to='/cart' className='Link'><Button variant="contained" color="secondary">CheckOut</Button></Link>
+                        }
                     </BuyingDetailContainer>
                 </InfoContainer>
             </DetailContainer>
