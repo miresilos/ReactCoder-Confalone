@@ -4,6 +4,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import ItemDetailContainer from './containers/ItemDetailContainer';
 import ItemListContainer from './containers/ItemListContainer';
+import Cart from './components/Cart';
 
 function App() {
   return (
