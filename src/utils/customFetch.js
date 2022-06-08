@@ -1,4 +1,3 @@
-import React from 'react';
 let is_ok = true;
 
 function customFetch(time, task) {
