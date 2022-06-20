@@ -1,8 +1,7 @@
 import React from 'react'
 import { createContext, useState } from "react";
+
 export const CartContext = createContext();
-
-
 
 const CartContextProvider = ({ children }) => {
     const [cartList, setCartList] = useState([]);
@@ -14,7 +13,7 @@ const CartContextProvider = ({ children }) => {
                 ...cartList,
                 {
                     idItem: item.id,
-                    imgItem: item.image[0],
+                    imgItem: item.image,
                     nameItem: item.name,
                     costItem: item.cost,
                     qtyItem: qty
@@ -22,6 +21,9 @@ const CartContextProvider = ({ children }) => {
             ]);
         } else {
             found.qtyItem += qty;
+            setCartList([
+                ...cartList
+            ]);
         }
     }
 

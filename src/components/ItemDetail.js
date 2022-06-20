@@ -6,6 +6,7 @@ import { Flex, DetailContainer, BuyingDetailContainer, ImageDetail, InfoContaine
 import { CartContext } from "./CartContext";
 import React from 'react'
 
+
 const ItemDetail = ({item}) => {
     const [itemCount, setItemCount] = useState(0);
     const detailContext = useContext(CartContext);
@@ -17,14 +18,14 @@ const ItemDetail = ({item}) => {
     }
 
     return(
-        <>
+        <DetailContainer>
         {
             item && item.image
             ? 
-            <DetailContainer>
+            
                 <InfoContainer>
                     <HeadDetailInfoContainer>
-                        <ImageDetail src={item.image[0]} />
+                        <ImageDetail src={item.image} />
                         <TitleDetail>{item.name}</TitleDetail>
                     </HeadDetailInfoContainer>
                     <Desc>{item.description}</Desc>
@@ -40,10 +41,13 @@ const ItemDetail = ({item}) => {
                         }
                     </BuyingDetailContainer>
                 </InfoContainer>
-            </DetailContainer>
-            : <p>Cargando...</p>
+            
+            : <div className="loader-container">
+                <div className="loader"></div>
+                <div className="loader2"></div>
+              </div>
         }
-        </>
+        </DetailContainer>
     );
 }
 
