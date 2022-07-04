@@ -23,7 +23,7 @@
 }
 
 .AppBar{
-  background-color: #FF090C !important;
+  background-color: #704411ec !important;
 }
 
 .Link{
@@ -33,18 +33,18 @@
   margin-left: 180px;
 }
 .InfoOutlinedLink{
-  color: white;
+  color: rgb(211, 161, 161);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .ShoppingCart{
-  color: white;
+  color: rgb(126, 231, 226);
 }
 
 #order-now{
-  color: white;
+  color: rgba(122, 90, 29, 0.842);
   font-size: 18px;
   font-weight: bolder;
   background-color: black;
@@ -71,7 +71,7 @@
 }
 
 .cont-menu{
-  background-color: #FF090C;
+  background-color: #58431be1;
   box-shadow: 2px 0 5px 2px rgb(66,66,66);
   width: 400px;
   border-radius: 10px;
@@ -105,7 +105,7 @@
   background-color: white;
 }
 .cont-menu ul li:hover p{
-  color: #FF090C;
+  color: #0c7e86;
 }
 
 .active{
@@ -143,8 +143,8 @@
   width: 70%;
   height: 70%;
   border: solid 4px transparent;
-  border-top-color: #FF090C;
-  border-left-color: #FF090C;
+  border-top-color: #0549af;
+  border-left-color: #612306;
   border-radius: 50%;
   animation: loader2 1.2s linear infinite;
 }

@@ -4,8 +4,7 @@ import { useContext, useState } from "react";
 import ItemCount from "./ItemCount";
 import { Flex, DetailContainer, BuyingDetailContainer, ImageDetail, InfoContainer, HeadDetailInfoContainer, TitleDetail, Desc, Price } from "./StyledComponents";
 import { CartContext } from "./CartContext";
-import React from 'react'
-
+import React from 'react';
 
 const ItemDetail = ({item}) => {
     const [itemCount, setItemCount] = useState(0);

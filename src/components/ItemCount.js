@@ -9,7 +9,7 @@ const ItemCount = ({stock = 0, initial = 1, onAdd}) => {
 
     useEffect(() => {
         setCount(initial);
-    },[]);
+    },[]); // eslint-disable-line react-hooks/exhaustive-deps
 
     const increment = () => {
         if (count < stock) {
@@ -29,9 +29,9 @@ const ItemCount = ({stock = 0, initial = 1, onAdd}) => {
         <ProductAmount>{count}</ProductAmount>
         <Button variant="text" onClick={decrease}><Remove /></Button>
         {
-            stock
-            ? <Button variant="contained" color="primary" onClick={() => onAdd(count)}>Add to Cart</Button>
-            : <Button variant="contained" disabled>Add to Cart</Button>
+            stock && count
+            ? <Button variant="contained" color="primary" onClick={() => onAdd(count)}>Añadir al Carrito</Button>
+            : <Button variant="contained" disabled>Añadir al Carrito</Button>
         }
         
         </ProductAmountContainer>
